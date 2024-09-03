@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/judul"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="40dp" />
+
+    <ImageView
+        android:id="@+id/location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/location_on"
+        android:layout_below="@id/judul"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alamat"
+        android:layout_below="@id/judul"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="75dp"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/tv_update_info"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/button_border"
+        android:layout_below="@+id/alamat"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center">
+
+        <!-- Informasi perubahan data katalog -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/informasi"
+            android:textSize="14sp"
+            android:textColor="#808080"
+            />
+
+        <!-- Pembaruan terakhir -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan"
+                android:textSize="14sp"
+                android:textColor="#808080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan_terakhir"
+                android:textSize="14sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Pembaruan selanjutnya -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan_selanjutnya"
+                android:textSize="14sp"
+                android:textColor="#808080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan_selanjutnyaaaa"
+                android:textSize="14sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/kolom_1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/tv_update_info"
+        android:layout_marginTop="50dp">
+
+        <!--icon 1-->
+        <LinearLayout
+            android:id="@+id/kartu1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/efek_bayangan"
+            android:gravity="center"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="40dp"
+            android:elevation="7dp">
+
+            <ImageView
+                android:id="@+id/icon_search"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/search_list"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/katalog_tender"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!--icon 2-->
+        <LinearLayout
+            android:id="@+id/kartu2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/efek_bayangan"
+            android:gravity="center"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="225dp"
+            android:elevation="7dp">
+            <ImageView
+                android:id="@+id/icon_bookmark"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/bookmark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tender_tersimpan"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/kolom_2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/kolom_1"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/kartu3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/efek_bayangan"
+            android:gravity="center"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="40dp"
+            android:elevation="7dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/insert_chart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/laporan_setaistik"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kartu4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/efek_bayangan"
+            android:gravity="center"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="-5dp"
+            android:elevation="7dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pengaturan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
